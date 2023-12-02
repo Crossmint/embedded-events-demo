@@ -9,7 +9,14 @@ function App() {
   const [orderIdentifier, setOrderIdentifier] = useState<string | null>(null);
   const [events, setEvents] = useState<any[]>([]);
 
+  const projectId = process.env.NEXT_PUBLIC_CROSSMINT_PROJECT_ID as string;
+  const collectionId = process.env
+    .NEXT_PUBLIC_CROSSMINT_COLLECTION_ID as string;
+  const environment = process.env.NEXT_PUBLIC_CROSSMINT_ENVIRONMENT as string;
+
   const ref = useRef<HTMLDivElement>(null);
+
+  // disabled this because it was also scrolling the parent window
   // useEffect(() => {
   //   if (events.length) {
   //     ref.current?.scrollIntoView({
@@ -38,9 +45,9 @@ function App() {
       <div className="grid col-span-2 p-1">
         {orderIdentifier === null ? (
           <CrossmintPaymentElement
-            projectId="e56a55e2-d4b1-4701-8709-2af6a73d9bb5"
-            collectionId="849002d8-83a0-4a80-886c-17360f067f93"
-            environment="staging"
+            projectId={projectId}
+            collectionId={collectionId}
+            environment={environment}
             emailInputOptions={{
               show: true,
             }}
