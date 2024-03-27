@@ -77,22 +77,15 @@ const Minting: React.FC<MintingProps> = ({ orderIdentifier, setEvents }) => {
             <div className="mt-10">
               <a
                 target="_blank"
-                className="block bg-[#2081e2] rounded-lg mt-3 p-3 text-white"
-                href={`https://testnets.opensea.io/assets/mumbai/${result?.contractAddress}/${result?.tokenIds[0]}`}
+                className="block bg-[#0052ff] rounded-lg mt-3 p-3 text-white"
+                href={`https://sepolia.basescan.org/tx/${result?.txId}`}
               >
-                View on OpenSea
-              </a>
-              <a
-                target="_blank"
-                className="block bg-[#663399] rounded-lg mt-3 p-3 text-white"
-                href={`https://mumbai.polygonscan.com/tx/${result?.txId}`}
-              >
-                View on Polygonscan
+                View on BASE Scan
               </a>
               <a
                 target="_blank"
                 className="block bg-[#81feab] rounded-lg mt-3 p-3 text-black"
-                href={`https://staging.crossmint.com/user/collection/poly:${result?.contractAddress}:${result?.tokenIds[0]}`}
+                href={`https://staging.crossmint.com/user/collection/base-sepolia:${result?.contractAddress}:${result?.tokenIds[0]}`}
               >
                 View in Crossmint
               </a>
