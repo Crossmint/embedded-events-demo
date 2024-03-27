@@ -51,10 +51,9 @@ function App() {
             emailInputOptions={{
               show: true,
             }}
+            paymentMethod="fiat"
             mintConfig={{
-              _quantity: "1",
-              totalPrice: "0.0001",
-              _id: "3",
+              totalPrice: "0.0005",
             }}
             onEvent={(event) => {
               setEvents((events) => [...events, event]);
