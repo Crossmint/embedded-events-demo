@@ -68,7 +68,7 @@ const Minting: React.FC<MintingProps> = ({ orderIdentifier, setEvents }) => {
             <div className="loading-wrap">
               <div className="loading"></div>
             </div>
-            This may take up to a few minutes
+            This will take about a minute
           </>
         )}
         {status === "success" && (
